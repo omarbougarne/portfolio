@@ -1,9 +1,9 @@
 export const projects = [
     {
-      title: "React Reserve",
-      subtitle: "MERN Stack",
+      title: "AniDB",
+      subtitle: "Laravel",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "A user interface for stroing favorite art works Manga or Anime",
       image: "./project-1.gif",
       link: "https://reactbootcamp.com",
     },
