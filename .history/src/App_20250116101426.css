@@ -1,7 +1,26 @@
+:root {
+  /* Brighter color palette */
+  --primary-dark: #0F2942;    /* Slightly lighter dark blue */
+  --secondary-dark: #1E3448;  /* Lifted dark blue */
+  --accent-blue: #00D1FF;     /* Brighter cyan */
+  --accent-bright: #40F7FF;   /* Electric cyan */
+  --neon-blue: #80FFFF;       /* Bright neon cyan */
+  --highlight: #FF3DFF;       /* Bright magenta for pop */
+  --dark-gray: #2F4562;       /* Lifted gray */
+  --light-gray: #405B7F;      /* Brighter gray */
+  
+  /* Gradient stops */
+  --gradient-1: #0088FF;
+  --gradient-2: #00F0FF;
+  --gradient-3: #80FFFF;
+  --gradient-4: #40F7FF;
+}
+
 .App {
   text-align: center;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-dark) 100%);
   min-height: 100vh;
+  color: #ffffff;
 }
 
 .App-logo {
@@ -23,7 +42,7 @@
 }
 
 .App-header {
-  background: linear-gradient(180deg, #1a1f25 0%, #282c34 100%);
+  background: linear-gradient(180deg, var(--primary-dark) 0%, var(--dark-gray) 100%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -83,12 +102,11 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 20px;
   margin: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Add smooth scrolling */
@@ -101,7 +119,7 @@ html {
   padding: 10px 20px;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(45deg, #61dafb, #00d8ff);
+  background: linear-gradient(45deg, var(--accent-blue), var(--neon-blue));
   color: white;
   font-weight: bold;
   cursor: pointer;
@@ -119,8 +137,6 @@ html {
   padding: 80px 0;
   position: relative;
   overflow: hidden;
-  border: 2px solid transparent;
-  border-image: linear-gradient(45deg, #61dafb, #00d8ff) 1;
 }
 
 .section::before {
@@ -136,11 +152,16 @@ html {
 
 /* Cool gradient text effect */
 .gradient-text {
-  background: linear-gradient(120deg, #61dafb, #00d8ff, #0088ff);
+  background: linear-gradient(120deg, 
+    var(--accent-bright) 0%,
+    var(--highlight) 50%,
+    var(--accent-blue) 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: gradient-shift 8s ease infinite;
+  filter: drop-shadow(0 0 8px rgba(255, 61, 255, 0.3));
 }
 
 /* Modern grid layout */
@@ -153,12 +174,11 @@ html {
 
 /* Enhanced card styles */
 .glass-card {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 
-    0 4px 30px rgba(0, 0, 0, 0.1),
-    inset 0 0 0 1px rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+    0 4px 30px rgba(0, 209, 255, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
   padding: 25px;
   margin: 15px;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -189,18 +209,19 @@ html {
 .glass-card:hover {
   transform: translateY(-10px) scale(1.02);
   box-shadow: 
-    0 20px 40px rgba(0, 0, 0, 0.12),
-    inset 0 0 0 2px rgba(97,218,251,0.4);
+    0 20px 40px rgba(0, 209, 255, 0.15),
+    inset 0 0 0 2px var(--accent-bright);
+  border-color: var(--accent-bright);
 }
 
 /* Animated background */
 .animated-bg {
   background: linear-gradient(
     45deg,
-    #f5f7fa,
-    #c3cfe2,
-    #e0eafc,
-    #cfdef3
+    var(--primary-dark),
+    var(--dark-gray),
+    var(--secondary-dark),
+    var(--light-gray)
   );
   background-size: 400% 400%;
   animation: gradient-animation 15s ease infinite;
@@ -211,24 +232,24 @@ html {
   padding: 12px 24px;
   border: none;
   border-radius: 30px;
-  background: rgba(97,218,251,0.1);
-  color: #61dafb;
+  background: rgba(0, 209, 255, 0.15);
+  color: var(--accent-bright);
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
-  border: 2px solid #61dafb;
-  text-shadow: 0 0 8px rgba(97,218,251,0.5);
+  border: 2px solid var(--accent-bright);
+  text-shadow: 0 0 8px var(--accent-bright);
   position: relative;
   overflow: hidden;
 }
 
 .neon-button:hover {
-  background: #61dafb;
-  color: white;
+  background: var(--accent-bright);
+  color: var(--primary-dark);
   box-shadow: 
-    0 0 20px rgba(97,218,251,0.5),
-    0 0 40px rgba(97,218,251,0.3),
-    0 0 60px rgba(97,218,251,0.1);
+    0 0 20px var(--accent-bright),
+    0 0 40px var(--accent-blue),
+    0 0 60px var(--neon-blue);
 }
 
 /* Floating animation */
@@ -262,16 +283,15 @@ html {
 
 ::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(45deg, #61dafb, #00d8ff);
+  background: var(--accent-blue);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(45deg, #00d8ff, #61dafb);
+  background: var(--accent-bright);
 }
 
 /* Loading spinner */
@@ -297,4 +317,79 @@ html {
   .grid-container {
     grid-template-columns: 1fr;
   }
+}
+
+/* Add some new neon effects */
+.neon-border {
+  border: 2px solid var(--accent-bright);
+  box-shadow: 
+    0 0 10px var(--accent-bright),
+    0 0 20px var(--accent-blue),
+    inset 0 0 15px var(--neon-blue);
+}
+
+.neon-text {
+  color: var(--accent-bright);
+  text-shadow: 
+    0 0 5px var(--accent-bright),
+    0 0 10px var(--accent-blue),
+    0 0 20px var(--neon-blue),
+    0 0 40px var(--highlight);
+}
+
+/* Add a subtle grid background */
+.grid-bg {
+  background-image: linear-gradient(var(--accent-blue) 1px, transparent 1px),
+    linear-gradient(90deg, var(--accent-blue) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-color: var(--primary-dark);
+  opacity: 0.1;
+}
+
+/* Add shimmer effect */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    transparent,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent,
+    transparent
+  );
+  transform: rotate(30deg);
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  from {
+    transform: rotate(30deg) translateX(-100%);
+  }
+  to {
+    transform: rotate(30deg) translateX(100%);
+  }
+}
+
+/* Add glow effect for text */
+.glow-text {
+  color: var(--accent-bright);
+  text-shadow:
+    0 0 7px var(--accent-bright),
+    0 0 10px var(--accent-bright),
+    0 0 21px var(--accent-bright),
+    0 0 42px var(--accent-blue),
+    0 0 82px var(--accent-blue),
+    0 0 92px var(--accent-blue),
+    0 0 102px var(--accent-blue),
+    0 0 151px var(--accent-blue);
 }

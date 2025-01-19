@@ -1,0 +1,55 @@
+.navbar {
+  background: linear-gradient(135deg, #1a1f25 0%, #282c34 100%);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.title-font {
+  background: linear-gradient(120deg, #61dafb, #00d8ff, #0088ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 8s ease infinite;
+}
+
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #61dafb;
+  text-shadow: 0 0 8px rgba(97,218,251,0.5);
+}
+
+.button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.hire-me-button {
+  background: rgba(97,218,251,0.1);
+  color: #61dafb;
+  border: 2px solid #61dafb;
+  text-shadow: 0 0 8px rgba(97,218,251,0.5);
+}
+
+.hire-me-button:hover {
+  background: #61dafb;
+  color: white;
+  box-shadow: 
+    0 0 20px rgba(97,218,251,0.5),
+    0 0 40px rgba(97,218,251,0.3),
+    0 0 60px rgba(97,218,251,0.1);
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
