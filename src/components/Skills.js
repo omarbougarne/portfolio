@@ -2,6 +2,20 @@ import React from "react";
 import './Skills.css';
 
 export default function Skills() {
+  const skills = [
+    "MERN stack",
+    "Next.js",
+    "NestJS",
+    "React Native",
+    "PHP/Laravel",
+    "MySQL",
+    "PostgreSQL",
+    "CI/CD",
+    "GitHub Actions",
+    "Agile",
+    "Scrum/Kanban"
+  ];
+
   return (
     <section id="skills" className="skills-section">
       <div className="container px-5 py-10 mx-auto">
@@ -16,17 +30,23 @@ export default function Skills() {
           </p>
         </div>
         <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-          {/* Uncomment and use the skills array when available */}
-          {/* {skills.map((skill) => (
+          {skills.map((skill) => (
             <div key={skill} className="p-2 sm:w-1/2 w-full">
               <div className="skill-card">
-                <BadgeCheckIcon className="text-green-400 w-6 h-6 flex-shrink-0 mr-4" />
                 <span className="title-font font-medium text-white">
                   {skill}
                 </span>
               </div>
             </div>
-          ))} */}
+          ))}
+        </div>
+        <div className="text-center mt-20">
+          <h2 className="sm:text-3xl text-2xl font-medium title-font gradient-text mb-4">
+            Certifications
+          </h2>
+          <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto">
+            {/* Add your certifications here */}
+          </p>
         </div>
       </div>
     </section>

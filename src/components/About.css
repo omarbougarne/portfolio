@@ -1,10 +1,11 @@
 .about-section {
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+   background: linear-gradient(135deg, #1a1f25 0%, #282c34 100%);
   padding: 80px 0;
   position: relative;
   overflow: hidden;
   border: 2px solid transparent;
   border-image: linear-gradient(45deg, #61dafb, #00d8ff) 1;
+  animation: background-move 10s ease infinite;
 }
 
 .about-section::before {
@@ -72,4 +73,10 @@
   0% { background-position: 0% 50% }
   50% { background-position: 100% 50% }
   100% { background-position: 0% 50% }
+}
+
+@keyframes background-move {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  100% { background-position: 0% 0%; }
 }
