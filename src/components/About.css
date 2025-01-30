@@ -4,7 +4,7 @@
   position: relative;
   overflow: hidden;
   border: 2px solid transparent;
-  border-image: linear-gradient(45deg, #61dafb, #00d8ff) 1;
+ 
   animation: background-move 10s ease infinite;
 }
 

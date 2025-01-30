@@ -8,26 +8,26 @@ export const projects = [
       link: "https://reactbootcamp.com",
     },
     {
-      title: "React Tracks",
-      subtitle: "React and Python",
+      title: "SportsPal",
+      subtitle: "Nest and React Native",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "coming soon...",
       image: "./project-2.gif",
       link: "https://reedbarger.com",
     },
     {
-      title: "DevChat",
-      subtitle: "React and Firebase",
+      title: "Discord Bot",
+      subtitle: "Node Express and DiscordJS",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "Task managing discord server Bot",
       image: "./project-3.gif",
       link: "https://jsbootcamp.com",
     },
     {
-      title: "Epic Todo App",
-      subtitle: "React Hooks",
+      title: "CineManager",
+      subtitle: "Express React",
       description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+        "Movie streaming plateform",
       image: "./project-4.gif",
       link: "https://pythonbootcamp.com",
     },
